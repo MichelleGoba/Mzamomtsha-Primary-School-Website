@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel=”stylesheet” href=”css/bootstrap.css”> <link rel=”stylesheet”
+    href=”css/bootstrap-responsive.css”>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="register.css" />
+    <title>Mzamontsha Primary School</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="form">
+        <div class="title">Sign Up</div>
+
+        <div>
+          <label for="username">User Name</label>
+          <i class="fas fa-user"></i>
+
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Joy Shaheb"
+          />
+
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+
+          <div class="error"></div>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <i class="far fa-envelope"></i>
+
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="abc@gmail.com"
+          />
+
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+
+          <div class="error"></div>
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <i class="fas fa-lock"></i>
+
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password here"
+          />
+
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+
+          <div class="error"></div>
+        </div>
+        <button id="btn" type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+  <script src="register.js">
+
+    //---------CORS-------------
+function CORSSolve(){
+  const xhttp = new XMLHttpRequest()
+  xpttp.onreadystatechange = function(){
+    if (this.readyState == 4 && this.status == 200){
+      document.getElementById('data').innerText = xhttp.responseText
+    }
+  };
+  http.open("GET", "http://127.0.0.1:5502/", true)
+  xhttp.send()
+  }
+CORSSolve()
+  </script>
+</html>

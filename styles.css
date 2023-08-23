@@ -1,0 +1,644 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(images/Mzamomtsha\ 2.PNG);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  text-decoration: none;
+}
+.header .hero-btn {
+  text-decoration: none;
+}
+nav {
+  position: fixed;
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img {
+  width: 150px;
+}
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.text-box {
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text-box h1 {
+  font-size: 300%;
+}
+.text-box h2 {
+  font-size: 300%;
+  color: #fff;
+}
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 14px;
+  color: #fff;
+}
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+.hero-btn:hover {
+  border: 2px solid rgba(2, 63, 110, 255);
+  background: #b4b2b2;
+  transition: 1s;
+}
+.events-btn {
+  display: inline-block;
+  width: 13%;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: #023f6e;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+.hero-btn:hover {
+  border: 2px solid rgba(2, 63, 110, 255);
+  background: #b4b2b2;
+  transition: 1s;
+}
+nav .fa {
+  display: none;
+}
+@media (max-width: 700px) {
+  .text-box h1 {
+    font-size: 20px;
+  }
+  .nav-links ul li {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    background: #979595;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: 0;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+  }
+  nav .fa {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .nav-links ul {
+    padding: 30px;
+  }
+}
+
+/* About area */
+body {
+  padding-top: 50px;
+}
+.text-center {
+  margin-top: 50px;
+}
+.col-sm-4 img {
+  border: 3px solid goldenrod;
+}
+ul.about-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.about-content li {
+  padding: 20px;
+  height: 290px;
+  background-clip: content-box;
+  -webkit-backhround-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.about-area p {
+  max-width: 800px;
+  margin-bottom: 35px;
+  line-height: 1.5;
+  text-align: justify;
+  padding-left: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+.section-title {
+  text-transform: uppercase;
+  font-size: 50px;
+  margin-bottom: 5%;
+}
+
+/* biography START */
+
+biography {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 45vh;
+  background: #3b5e7a;
+}
+
+.wrapper {
+  margin: 20px auto;
+  width: 80%;
+}
+
+.wrapper img {
+  max-width: 320px;
+  float: left;
+  border: 3px solid goldenrod;
+  border-radius: 10px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.w-text-box {
+  color: white;
+}
+
+.w-text-box p {
+  font-size: 16px;
+  text-align: justify;
+}
+.h-text-box p {
+  font-size: 16px;
+  text-align: justify;
+}
+/* headmaster's biography start */
+headmaster {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #3b5e7a;
+}
+
+.h-wrapper {
+  margin: 10px auto;
+  width: 80%;
+}
+
+.h-wrapper img {
+  max-width: 320px;
+  float: right;
+  border: 3px solid goldenrod;
+  border-radius: 10px;
+  margin-left: 15px;
+}
+
+.h-text-box {
+  color: black;
+}
+.w-text-box {
+  color: black;
+}
+
+.h-text-box p {
+  font-size: 16px;
+}
+h2 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+/* Fits  the website according to screen or device used */
+@media (max-width: 1200px) {
+  .about-left,
+  .about-right {
+    flex-basis: 100%;
+  }
+  .about-content li {
+    padding: 8px;
+  }
+  .about-area p {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@media (max-width: 980px) {
+  .about-left,
+  .about-right {
+    flex-basis: 50%;
+  }
+  .about-content li {
+    padding: 8px;
+  }
+  .about-area p {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+/*---------EVENTS----------*/
+.text-center {
+  margin-top: 50px;
+}
+.campus {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+.campus-col {
+  flex-basis: 32%;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  padding-right: 20px;
+}
+.campus-col img {
+  width: 100%;
+  display: block;
+  height: 240px;
+  border-radius: 10px;
+  border: 3px solid goldenrod;
+}
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 89%;
+  position: absolute;
+  align-content: top;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.layer:hover {
+  background: #023f6e;
+}
+.layer h3 {
+  width: 100%;
+  font-weight: 500;
+  color: #fff;
+  font-size: 26px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0, 5s;
+}
+
+.layer:hover h3 {
+  bottom: 49%;
+  opacity: 1;
+}
+
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/*----- News------*/
+
+.facilities {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+.facilities-col {
+  flex-basis: 31%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+}
+.facilities-col img {
+  width: 100%;
+  border-radius: 10px;
+  height: 240px;
+}
+.facilities-col p {
+  padding: 0;
+}
+.facilities-col h3 {
+  margin-top: 16px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/*------CALL TO ACTION---*/
+
+.testimonials img {
+  margin-top: 50px;
+}
+.cta {
+  margin: 100px auto;
+  width: 80%;
+  background-image: linear-gradient(
+    to left,
+    rgba(216, 216, 216, 0.7),
+    rgba(216, 216, 216, 0.7)
+  );
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: left;
+  padding: 100px 0;
+  padding-top: 50px;
+}
+.testimonials h1 {
+  margin-right: 10px;
+}
+@media (max-width: 700px) {
+  .cta h1 {
+    font-size: 24px;
+  }
+}
+
+/*-----footer----*/
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+.footer h4 {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: none;
+  bottom: 0;
+}
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 50px;
+  text-align: left;
+  text-decoration: none;
+  margin: 5px 5px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: none;
+  color: white;
+}
+.fa-twitter {
+  background: none;
+  color: white;
+}
+.fa-envelope {
+  background: none;
+  color: white;
+}
+.fa-envelope {
+  background: none;
+  color: #fff;
+}
+.h6 {
+  text-align: center;
+}
+/*-----icons----*/
+iframe {
+  margin-top: 15px;
+}
+
+.fa-envelope {
+  background: none;
+  color: rgb(80, 80, 80);
+}
+
+.icons .fa {
+  color: #fff;
+  cursor: pointer;
+  padding: 18px 0;
+  text-decoration: none;
+}
+.fa-heart-o {
+  color: #fff;
+}
+
+/*------FAQ------*/
+h1 {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+a,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+p,
+span {
+  font-weight: 300;
+  font-size: clamp(0.2rem, 2vw, 1.2rem);
+}
+
+/* Spacing -------------------------------------------- */
+
+.margin-bottom {
+  margin-bottom: 1rem;
+}
+
+/* Text Style ----------------------------------------- */
+
+.text-lg {
+  font-size: 25px;
+  font-weight: 600;
+}
+.text-md {
+  font-size: clamp(0.8rem, 5vw, 1.6rem);
+  font-weight: 400;
+  line-height: 1.3;
+}
+.text-center {
+  text-align: center;
+}
+
+/* Support HTML CSS ----------------------------------- */
+
+.title {
+  font-size: 1.4rem;
+  color: gray;
+  margin-top: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid gray;
+}
+
+.container {
+  display: grid;
+  margin: auto;
+  place-content: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+/* F.A.Q ---------------------------------------------- */
+
+.faq-accordion {
+  display: grid;
+  gap: 0.4rem;
+  max-width: 50rem;
+}
+.faq-input {
+  display: none;
+}
+.cta ul li {
+  list-style: none;
+  border: solid;
+}
+.faq-label {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 3%;
+  background-color: var(--color-input);
+}
+.faq-content {
+  background-color: var(--color-input);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in, padding 0.3s ease-in;
+}
+.faq-content p {
+  margin: 2rem;
+}
+.faq-input:checked ~ .faq-content {
+  max-height: 60rem;
+  transition: max-height 0.3s ease-in;
+}
+.faq-input:checked ~ .faq-label i {
+  transform: rotate(45deg);
+  transition: max-height 0.3s ease-in, padding 0.3s ease-in;
+}
+
+/* Media Query --------------------------------------- */
+
+@media (320px <= width <= 940px) {
+  .faq-content p {
+    margin: 1rem;
+  }
+}
+
+@media (320px <= width <= 480px) {
+  .container {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 2048px) {
+  .container {
+    zoom: 2;
+  }
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 80%;
+  position: relative;
+  margin: auto;
+  border: 3px solid goldenrod;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+.text-b {
+  color: goldenrod !important;
+  font-weight: 600;
+  font-size: 20px;
+  width: 100%;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-bottom: 50px;
+  text-decoration: none !important;
+}
+
+/* Number text (1/3 etc) */
+
+.headertext {
+  color: black;
+  font-weight: 500;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+*
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 3.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
+  .about-area p {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}

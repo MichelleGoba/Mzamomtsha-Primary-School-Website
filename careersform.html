@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vacancies</title>
+  <link rel=”stylesheet” href=”css/bootstrap.css”>
+    <link rel=”stylesheet” href=”css/bootstrap-responsive.css”>  
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="careersform.css">
+    <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+  <div class="container">
+    <img src="ShortPixelOptimized/logo_1.png" class="center"  alt="logo">
+    <div class="title">Vacancy application form</div>
+    <form id="form" name="form" class="form" onsubmit="return (check());">
+      <div class="user-details">
+
+      <!-- Full name start -->
+      <div class="input-box">
+      <div class="form-control"><label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="Enter fullname">
+        <small>Error Message</small> 
+      </div>
+      </div>
+      <!-- Fullname end -->
+      
+      <!-- Surname start -->
+      <div class="input-box">
+        <div class="form-control"><label for="surname">Surname</label>
+          <input type="text" id="surname"  placeholder="Enter Surname">
+          <small>Error Message</small> 
+        </div>
+        </div>
+        <!-- Surname end -->
+
+        <!-- Nationality start -->
+        <div class="input-box">
+          <div class="form-control"><label for="nationality">Nationality</label>
+            <input type="text" id="nationality" placeholder="Enter Nationality">
+            <small>Error Message</small> 
+          </div>
+        </div>
+          <!-- Nationality end -->
+
+           <!-- ID Number start -->
+        <div class="input-box">
+          <div class="form-control"><label for="ID Number">ID Number</label>
+            <input type="text" id="ID Number" placeholder="Enter ID Number">
+            <small>Error Message</small>
+          </div>
+        </div>
+          <!-- ID Number end -->
+
+            <!-- Vacancy start -->
+        <div class="input-box">
+          <div class="form-control"><label for="vacancy">Vacancy applying for</label>
+            <input type="text" id="vacancy" placeholder="Enter Vacancy applying for">
+            <small>Error Message</small>
+          </div>
+        </div>
+          <!-- vacancy end -->
+
+            <!-- Qualifications start -->
+        <div class="input-box">
+          <div class="form-control"><label for="qualifications">Qualifications</label>
+            <input type="text" id="qualifications" placeholder="Enter Qualification">
+            <small>Error Message</small>
+          </div>
+        </div>
+          <!-- Qualification end -->
+
+            <!-- Notice start -->
+        <div class="input-box">
+          <div class="form-control"><label for="availability">Notice period</label>
+            <input type="text" id="availability" placeholder="Enter Notice period">
+          </div>
+        </div>
+          <!--Notice end -->
+    
+            <!-- Res Add start -->
+        <div class="input-box">
+          <div class="form-control"><label for="residential">Residential address</label>
+            <input type="text" id="residential" placeholder="Enter Residential address">
+            <small>Error Message</small>
+          </div>
+        </div>
+          <!-- Res Add end -->
+
+            <!-- Postal Addres start -->
+        <div class="input-box">
+          <div class="form-control"><label for="postal">Postal address</label>
+            <input type="text" id="postal" placeholder="Enter Postal address">
+            <small>Error Message</small> 
+          </div>
+        </div>
+          <!--Postal Addre end -->
+
+            <!-- contact # start -->
+        <div class="input-box">
+          <div class="form-control"><label for="contact">Contact number</label>
+            <input type="text" id="contact" name="phone" placeholder="Enter Contact number">
+            <small>Error Message</small> 
+          </div>
+         </div>
+          <!-- contact #end -->
+
+            <!-- email start -->
+        <div class="input-box">
+          <div class="form-control"><label for="email">Email address</label>
+            <input type="text" id="email" size="50" placeholder="Enter Email address">
+            <small>Error Message</small>
+          </div>
+        </div>  
+          <!-- email end -->
+
+          <!-- Gender start -->
+          <div class="action" action="/action_page.php">
+            <label for="gender" style="color: #fff;">Choose a Gender:</label>
+            <select class="selectGender" id="selectGender"></select>
+          </div> 
+        </div>
+       <!-- gender end -->
+
+       <!-- CV start -->
+       
+       <div class="input-box">
+        <div class="form-control"><label for="qualifications"> CV</label>
+          <input type="file" onchange="showFile(this)">
+          <!-- <input type="file" id="file" onchange="readFile(this)">   -->
+          
+      </div>
+    </div> 
+      <!-- CV End -->
+
+      <!-- Matric certificate start-->
+      <div class="input-box">
+        <div class="form-control"><label for="qualifications">Matric certificate</label>
+          <input type="file" onchange="readFile(this)">  
+      </div>
+    </div> 
+     <!-- Matric certificate end -->
+  
+    <!-- Qualifications start -->
+
+    <div class="input-box">
+      <div class="form-control"><label for="qualifications"> Qualifications</label>
+         <input type="file" multiple id="uploadInput">
+         <label for="fileNum">Selected files:</label>
+         <output id="fileNum">0</output>
+         <label for="fileSize">Total size:</label>
+         <output id="fileSize">0</output>
+      </div>
+    </div>  
+     <!--Qualifications end  -->
+
+      <!-- sending a form with a file -->
+      <form id="formElem">
+        <p>Picture:</p><input type="file" name="picture" accept="image/*">
+        <input type="button" id="upload-btn" value="Upload">
+        <!-- <input type="submit"> -->
+      </form>
+
+  
+<!--    
+        !Button start -->
+      
+        <div class= "button-group">
+          <button onclick= "return (check());">Submit</button>
+      </div>
+    <div>
+        <!-- <button type="submit" name="submit" value="Alert" onclick="alertWithMessage()">Submit</button> -->
+  
+        <button type="back" onclick="myFunction()">Back</button>
+      </div>
+      <div>
+
+      </div>
+        <!-- Button end -->  
+
+</form> 
+</div>
+<script>
+ 
+// gender JS Code START
+  let gender = ["Male", "Female", "Prefer not to say",];
+gender.forEach (function(item){
+  let o=document.createElement ("option");
+  o.text = item;
+  o.value = item;
+  selectGender.appendChild(o);
+})
+// gender JS Code END
+</script>
+
+<script>
+  function myFunction() {
+    location.replace("index.html")
+  }
+  </script>
+  <script src="careersform.js">
+    function check(){
+      fullname= document.form.fullname.value;
+  alert(fullname);
+    }
+//---------CORS-------------
+function CORSSolve(){
+  const xhttp = new XMLHttpRequest()
+  xpttp.onreadystatechange = function(){
+    if (this.readyState == 4 && this.status == 200){
+      document.getElementById('data').innerText = xhttp.responseText
+    }
+  };
+  http.open("GET", "http://127.0.0.1:5502/", true)
+  xhttp.send()
+  }
+CORSSolve()
+  </script>
+
+</body>
+</html>
+
+

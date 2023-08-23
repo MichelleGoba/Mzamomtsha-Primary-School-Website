@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel=”stylesheet” href=”css/bootstrap.css”>
+    <link rel=”stylesheet” href=”css/bootstrap-responsive.css”>  
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <img src="images/logo.png" class="center"  alt="logo">
+    <div class="title">Admission Form</div>
+    <form id="form" class="form">
+      <div class="user-details">
+    
+      <!-- Full name start -->
+      <div class="input-box">
+        <div class="form-control"><label for="nationality">Learner's Name</label>
+          <input type="text" id="nationality" placeholder="Enter learner's nationality">
+          <small>Error Message</small> 
+        </div>
+        </div>
+      <!-- Fullname end -->
+      
+      <!-- Learners surname start -->
+      <div class="input-box">
+        <div class="form-control"><label for="surname">Learner's Surname</label>
+          <input type="text" id="surname" placeholder="Enter learner's surname">
+          <small>Error Message</small> 
+        </div>
+        </div>
+        <!-- Learners surname end -->
+
+        <!-- Nationality start -->
+        <div class="input-box">
+          <div class="form-control"><label for="nationality">Learner's Nationality</label>
+            <input type="text" id="nationality" placeholder="Enter learner's nationality">
+            <small>Error Message</small> 
+          </div>
+          </div>
+          <!-- Nationality end -->
+
+           <!-- ID Number start -->
+        <div class="input-box">
+          <div class="form-control"><label for="ID Number">Learner's ID Number</label>
+            <input type="text" id="Idnumber" placeholder="Enter Learner's id number">
+            <small>Error Message</small>
+          </div>
+          </div>
+          <!-- ID Number end -->
+
+            <!-- Vacancy start -->
+        <div class="input-box">
+          <div class="form-control"><label for="Last School Attended">Last School Attended</label>
+            <input type="text" id="lastschool" placeholder="Enter last school attended">
+            <small>Error Message</small>
+          </div>
+          </div>
+          <!-- vacancy end -->
+
+            <!-- Qualifications start -->
+        <div class="input-box">
+          <div class="form-control"><label for="Mother's Name">Mother's Name</label>
+            <input type="text" id="mother" placeholder="Mother's name">
+            <small>Error Message</small>
+          </div>
+          </div>
+          <!-- Qualification end -->
+
+            <!-- Notice start -->
+        <div class="input-box">
+          <div class="form-control"><label for="Father's Name">Father's Name</label>
+            <input type="text" id="father" placeholder="Father's name">
+            <small>Error Message</small>
+          </div>
+          </div>
+          <!--Notice end -->
+    
+            <!-- Residantial Address start -->
+        <div class="input-box">
+          <div class="form-control"><label for="Residential">Residential address</label>
+            <input type="text" id="residential" placeholder="Enter Residential address">
+            <small>Error Message</small>
+          </div>
+          </div>
+          <!-- Residantial Address end -->
+
+            <!-- Postal Addres start -->
+        <div class="input-box">
+          <div class="form-control"><label for="Postal address">Postal address</label>
+            <input type="text" id="postal" placeholder="Enter Postal address">
+            <small>Error Message</small> 
+          </div>
+          </div>
+          <!--Postal Addre end -->
+
+            <!-- Contact Details start -->
+        <div class="input-box">
+          <div class="form-control"><label for="contact">Contact number</label>
+            <input type="text" id="contact" placeholder="Enter contact number">
+            <small>Error Message</small>
+          </div>
+          </div>
+          <!-- contact #end -->
+
+            <!-- Email Address start -->
+        <div class="input-box">
+          <div class="form-control"><label for="email">Email address</label>
+            <input type="text" id="email" placeholder="Enter Email address">
+            <small>Error Message</small>
+          </div>
+          </div>  
+          <!-- Email Address end -->
+
+          <!-- ------------------ Gender Dropdown start-------------------- -->
+
+          <div class="action" action="/action_page.php">
+            <label for="gender" style="color: #fff;">Choose a Gender:</label>
+            <select class="selectGender" id="selectGender"></select>
+          </div>      
+
+<!-------------------- Gender Dropdown end-------------------------------- -->
+ 
+       <button>Submit</button>
+       <button type="submit" onclick="myFunction()">Back</button>
+       <div class="popup" id="popup">
+        <h2>Thank You!</h2>
+          <p>Your application has been successfulfy submitted.</p>
+       </div>
+      
+    
+    </form>       
+      </div>
+<!-- ------------------ Gender start-------------------- -->
+
+
+
+<!-------------------- Gender end-------------------------------- -->
+             
+<!------------  Pop-up alert start ---------------->
+<!-- <div class="button">
+  <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+  <div class="popup" id="popup">
+    <h2>Thank You!</h2>
+    <p>Your application has been successfulfy submitted.</p>
+    <button type="button" onclick="myFunction()">OK</button>
+  </div>
+  <input type="submit" value="Back" formaction="index.html">
+ </div> -->
+
+<!------------  Pop-up alert end ----------------->
+
+ <!-- JS Pop-up alert START -->
+<script>
+  let popup = document.getElementById("popup");
+  function openPopup(){
+    popup.classList.add("open-popup");
+  }
+  function closePopup(){
+    popup.classList.remove("open-popup");
+  }
+// JavaScript Pop-up alert END
+
+
+// gender JS Code START
+  let gender = ["Male", "Female", "Prefer not to say",];
+gender.forEach (function(item){
+  let o=document.createElement ("option");
+  o.text = item;
+  o.value = item;
+  selectGender.appendChild(o);
+})
+// gender JS Code END
+</script>
+<script>
+  function myFunction() {
+    location.replace("index.html")
+  }
+
+  </script>
+  <script>const form = document.getElementById('form');
+    const FullName = document.getElementById('fullname');
+    const Surname = document.getElementById('surname');
+    const nationality = document.getElementById('nationality');
+    const IdNumber = document.getElementById('Idnumber');
+    const Vacancy = document.getElementById('lastschool');
+    const Qualifications = document.getElementById('mother');
+    const Availability = document.getElementById('father');
+    const Residential = document.getElementById('residentia');
+    const Postal= document.getElementById('postal');
+    const Contact= document.getElementById('contact');
+    const email = document.getElementById('email');
+    
+    //Show input error messages
+    function showError(input, message) {
+      const formControl = input.parentElement;
+      formControl.className = 'form-control error';
+      const small = formControl.querySelector('small');
+      small.innerText = message;
+    }
+    //show success colour
+    function showSucces(input) {
+      const formControl = input.parentElement;
+      formControl.className = 'form-control success';
+    }
+    
+    //check Contact is valid
+    function checkContact(input) {
+      const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+      if(re.test(input.value.trim())) {
+          showSucces(input)
+      }else {
+          showError(input,'Contact is not invalid');
+      }
+    }
+
+    
+    //checkRequired fields
+    function checkRequired(inputArr) {
+      inputArr.forEach(function(input){
+          if(input.value.trim() === ''){
+              showError(input,`${getFieldName(input)} is required`)
+          }else {
+              showSucces(input);
+          }
+      });
+    }
+    //check input Length
+    function checkLength(input, min ,max) {
+      if(input.value.length < min) {
+          showError(input, `${getFieldName(input)} must be at least ${min} characters`);
+      }else if(input.value.length > max) {
+          showError(input, `${getFieldName(input)} must be les than ${max} characters`);
+      }else {
+          showSucces(input);
+      }
+    }
+    //get FieldName
+    function getFieldName(input) {
+      return input.id.charAt(0).toUpperCase() + input.id.slice(1);
+    }
+    
+    
+    //Event Listeners
+    form.addEventListener('submit',function(e) {
+      e.preventDefault();
+    
+      checkRequired([fullname, surname, nationality,IdNumber, lastschool, mother, father, residential, postal, contact, email]);;
+      checkLength(fullName,3,15);
+        checkLength(surname,6,25);
+        checkLength(nationality,6,25);
+        checkLength(IdNumber,13);
+        checkLength(lastschool,7,30);
+        checkLength(mother,3,15);
+        checkLength(father,3,5);
+        checkLength(residential,6,30);
+        checkLength(postal,6,30);
+        checkContact(contact,10);
+        checkEmail(email);
+    });
+ 
+    //---------CORS-------------
+function CORSSolve(){
+  const xhttp = new XMLHttpRequest()
+  xpttp.onreadystatechange = function(){
+    if (this.readyState == 4 && this.status == 200){
+      document.getElementById('data').innerText = xhttp.responseText
+    }
+  };
+  http.open("GET", "http://127.0.0.1:5502/", true)
+  xhttp.send()
+  }
+CORSSolve()
+    </script>
+</body>
+</html>
